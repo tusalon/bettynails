@@ -1,22 +1,22 @@
-// sw.js - Service Worker para KENIA STUDIO NAILS SIEMPRE BELLA
+// sw.js - Service Worker para Betty Nails
 
-const CACHE_NAME = 'keniastudio-nails-v1';
+const CACHE_NAME = 'bettynails-v1';
 const urlsToCache = [
-  '/keniastudio-nails/',
-  '/keniastudio-nails/index.html',
-  '/keniastudio-nails/admin.html',
-  '/keniastudio-nails/admin-login.html',
-  '/keniastudio-nails/setup-wizard.html',
-  '/keniastudio-nails/editar-negocio.html',
-  '/keniastudio-nails/manifest.json',
-  '/keniastudio-nails/icons/icon-72x72.png',
-  '/keniastudio-nails/icons/icon-96x96.png',
-  '/keniastudio-nails/icons/icon-128x128.png',
-  '/keniastudio-nails/icons/icon-144x144.png',
-  '/keniastudio-nails/icons/icon-152x152.png',
-  '/keniastudio-nails/icons/icon-192x192.png',
-  '/keniastudio-nails/icons/icon-384x384.png',
-  '/keniastudio-nails/icons/icon-512x512.png'
+  '/bettynails/',
+  '/bettynails/index.html',
+  '/bettynails/admin.html',
+  '/bettynails/admin-login.html',
+  '/bettynails/setup-wizard.html',
+  '/bettynails/editar-negocio.html',
+  '/bettynails/manifest.json',
+  '/bettynails/icons/icon-72x72.png',
+  '/bettynails/icons/icon-96x96.png',
+  '/bettynails/icons/icon-128x128.png',
+  '/bettynails/icons/icon-144x144.png',
+  '/bettynails/icons/icon-152x152.png',
+  '/bettynails/icons/icon-192x192.png',
+  '/bettynails/icons/icon-384x384.png',
+  '/bettynails/icons/icon-512x512.png'
 ];
 
 // ============================================
@@ -108,7 +108,7 @@ self.addEventListener('fetch', event => {
           }
           // Si no hay cache y es imagen, devolver icon por defecto
           if (event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) {
-            return caches.match('/keniastudio-nails/icons/icon-192x192.png');
+            return caches.match('/bettynails/icons/icon-192x192.png');
           }
           return new Response('Error de red', { status: 408 });
         });
@@ -138,6 +138,6 @@ self.addEventListener('message', event => {
   }
 });
 
-console.log('✅ Service Worker configurado para KENIA STUDIO NAILS SIEMPRE BELLA');
+console.log('✅ Service Worker configurado para Betty Nails');
 console.log('📦 Cache:', CACHE_NAME);
 console.log('📄 Archivos a cachear:', urlsToCache.length);
