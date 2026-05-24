@@ -1,6 +1,6 @@
 // sw.js - Service Worker para Betty Nails
 
-const CACHE_NAME = 'bettynails-v29';
+const CACHE_NAME = 'bettynails-v25';
 const urlsToCache = [
   '/bettynails/',
   '/bettynails/index.html',
