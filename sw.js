@@ -1,6 +1,6 @@
 // sw.js - Service Worker para Betty Nails
 
-const CACHE_NAME = 'bettynails-v29';
+const CACHE_NAME = 'bettynails-v47';
 const urlsToCache = [
   '/bettynails/',
   '/bettynails/index.html',
@@ -17,7 +17,14 @@ const urlsToCache = [
   '/bettynails/icons/icon-152x152.png',
   '/bettynails/icons/icon-192x192.png',
   '/bettynails/icons/icon-384x384.png',
-  '/bettynails/icons/icon-512x512.png'
+  '/bettynails/icons/icon-512x512.png',
+  '/bettynails/vendor/react.production.min.js',
+  '/bettynails/vendor/react-dom.production.min.js',
+  '/bettynails/vendor/babel.min.js',
+  '/bettynails/vendor/bcrypt.min.js',
+  '/bettynails/vendor/tailwind-browser.js',
+  '/bettynails/vendor/lucide/lucide.css',
+  '/bettynails/vendor/lucide/lucide.woff2'
 ];
 
 // ============================================
